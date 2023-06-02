@@ -9,6 +9,8 @@ class task {
     int m = Convert.ToInt32(Console.ReadLine());
     string [] stringArray = new string [m];
     InputStrArray(stringArray);
+    
+    Search3Сhar(stringArray);
   }
   
   static void InputStrArray(string [] stringArray)
@@ -20,4 +22,21 @@ class task {
     }
   }   
   
+  static string [] Search3Сhar(string [] stringArray)
+  {
+    int n = 0;
+    string [] rez = new string [n];
+    
+    for (int i = 0;i<stringArray.Length;i++)
+    {
+        if(stringArray[i].Length <=3) 
+        {
+            Array.Resize(ref rez, rez.Length + 1);
+            rez[rez.Length - 1] = stringArray[i];
+        }
+    }
+
+    return rez;
+  }
+
 }
