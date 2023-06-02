@@ -10,7 +10,7 @@ class task {
     string [] stringArray = new string [m];
     InputStrArray(stringArray);
     
-    Search3Сhar(stringArray);
+    printStrs(Search3Сhar(stringArray));
   }
   
   static void InputStrArray(string [] stringArray)
@@ -38,5 +38,14 @@ class task {
 
     return rez;
   }
-
+  static void printStrs(string [] stringArray)
+  {
+    Console.Write("");
+    for (int i = 0; i<stringArray.Length; i++)
+    {
+        if(i != stringArray.Length - 1) Console.Write("[{0}], ", stringArray[i]);
+        else Console.Write("[{0}]", stringArray[i]);
+    }
+    Console.Write("");
+  }
 }
